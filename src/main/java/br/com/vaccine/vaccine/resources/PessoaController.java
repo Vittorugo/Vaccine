@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/pessoas")
+@CrossOrigin(origins={"http://localhost:3000"})
 public class PessoaController {
 
     @Autowired
@@ -35,6 +36,7 @@ public class PessoaController {
                     pess.setIdade(pessoa.getIdade());
                     pess.setNome(pessoa.getNome());
                     pess.setTelefone(pessoa.getTelefone());
+                    pess.setVacinada(pessoa.getVacinada());
                     Pessoa pessoaAtualizada = pessoaRepository.save(pess);
                     return ResponseEntity.ok().body(pessoaAtualizada);
                 }).orElse(ResponseEntity.notFound().build());

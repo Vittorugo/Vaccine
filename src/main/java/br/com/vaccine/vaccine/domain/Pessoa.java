@@ -15,6 +15,20 @@ public class Pessoa {
     private String telefone;
     private String email;
     private String dataNascimento;
+    private Boolean isVacinada;
+
+    @ManyToOne
+    @JoinColumn(name = "codigo")
+    private GruposPrioridades gruposPrioridades;
+
+    public Boolean getVacinada() {
+        return isVacinada;
+    }
+
+    public void setVacinada(Boolean vacinada) {
+        isVacinada = vacinada;
+    }
+
 
     public Long getCodigo() {
         return codigo;
