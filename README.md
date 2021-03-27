@@ -1,2 +1,2 @@
 # Vaccine
-Sistema para cadastro de vacinação.
+Sistema para cadastro de vacinação desenvolvido na Fullstack Week.
